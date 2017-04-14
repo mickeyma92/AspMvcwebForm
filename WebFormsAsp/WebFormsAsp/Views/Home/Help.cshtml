@@ -1,0 +1,18 @@
+﻿@model List<WebFormsAsp.Models.PersonasModel>
+@{
+    ViewBag.Title = "Help";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+<h2>Help</h2>
+<span>@ViewBag.message</span>
+<p>
+    <ol>
+        @foreach (var obj in Model)
+        {
+            <li>@obj.Nombre</li>
+            <li>@obj.Apellido</li>
+        }
+    </ol>
+</p>
+

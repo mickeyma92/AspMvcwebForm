@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" type="text/css" rel="stylesheet"/>
+    <link href="@Url.Content("~/Content/mdb.min.css")" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/jquery-3.1.1.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/tether.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/bootstrap.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Scripts/mdb.min.js")"></script>
+</body>
+</html>
