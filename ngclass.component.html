@@ -1,0 +1,16 @@
+<h4>
+  Introduzca la puntuacion del alumno
+</h4>
+<input type="text" class="form-control" [(ngModel)]="puntuacion" />
+<hr />
+<div *ngIf="puntuacion">
+  <h4 *ngIf="puntuacion >= 0 && puntuacion <=10; else aviso"
+  [ngClass]="{ aprobado: puntuacion >= 5
+                    ,suspenso: puntuacion < 5}">
+    Puntuacion obtenida : {{puntuacion}}
+  </h4>
+  <ng-template #aviso>
+    <h4  *ngIf="puntuacion > 10" class="advertencia">Introduzca una puntuacion menor que diez</h4>
+    <h4  *ngIf="puntuacion < 10" class="advertencia">Introduzca una puntuacion mayor o igual que cero</h4>
+  </ng-template>
+</div>
